@@ -3,8 +3,17 @@ function initMap() {
     // The location of Uluru
     var russia = { lat: 3.51602, lng: -2.1969 };
     // The map, centered at Uluru
-    var map = new google.maps.Map(
-        document.getElementById('map'), { zoom: 20, center: russia });
+    var universityLocation = { lat: 26.9167, lng: 81.0000 }; // Example coordinates
+
+var map = new google.maps.Map(
+        document.getElementById('map'), { zoom: 15, center: universityLocation });
+
+// You can also add a marker:
+var marker = new google.maps.Marker({
+    position: universityLocation,
+    map: map,
+    title: 'Shri Ramswaroop Memorial University'
+});
     // The marker, positioned at Uluru
     var marker = new google.maps.Marker({ position: russia, map: map });
 }

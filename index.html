@@ -15,7 +15,11 @@
         <!-- --------------------Google Maps Api---------------- -->
         <script defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl7F3URup7S4Of3R3cJQLk535vNnUQRzg&callback=initMap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14225.804520374226!2d81.10283895!3d26.952609600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39995ee81add328f%3A0xbe8acc99218572c9!2sShri%20Ramswaroop%20Memorial%20University%20(SRMU)!5e0!3m2!1sen!2sin!4v1743179135017!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </script>
+        <script src="chatbot.js"></script>
+    </body>
+    </html>
         <title>ElectroHub | World's Best Market</title>
     </head>
 
@@ -24,29 +28,29 @@
             <div class="container">
                 <div class="navbar">
                     <div class="logo">
-                        <img src="images/logo.png" style="height:60px;" alt="logo-image">
+                        <img src="images/logosrm(1).jpg" style="height:60px;" alt="logo-image">
                     </div>
                     <nav>
                         <ul id="menu-items">
                             <li><a href="">Home</a></li>
-                            <li><a href="index2.html">Products</a></li>
+                            <li><a href="index2.html">Clubs</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="register.html">Account</a></li>
                         </ul>
                     </nav>
-                    <img src="images/cart.png" alt="cart" width="30px" height="30px" class="cart-img">
+                    <img src="images/i2nlogos.jpg" alt="cart" width="30px" height="30px" class="cart-img">
                     <img src="images/menu.png" alt="menu" width="30px" height="30px" class="menu-icon" onclick="menutoggle()">
                 </div>
                 <div class="row">
                     <div class="col-md-6 ">
-                        <h1 class="text-white">Great deals happening <br> Right Now!</h1>
-                        <p>Enjoy a safe, convenient shopping experience</p>
-                        <p>Shop stress-free from home. We’re ready to help, online or by phone.</p>
+                        <h1 class="text-white">SRMU Clubs  <br> Right Now!</h1>
+                        <p>Welcome over, the hub's OF club's</p>
+                        <p>Idhr Udhar Jane Ki Jarurat Nahi. We’re ready to help, here Online.</p>
                         <a href="" class="btn btn-main">Explore Now &#8594;</a>
                     </div>
                     <div class="col-md-6">
-                        <img src="images/laptop-banner.png" alt="banner-image" class="center">
+                        <img src="images/srmud.png" alt="banner-image" class="center">
                     </div>
 
                 </div>
@@ -54,12 +58,12 @@
         </div>
         <!-- featured products -->
         <div class="small-container mt-5">
-            <h2 class="title">Featured Products</h2>
+            <h2 class="title">Featured Club</h2>
             <div class="row horizontal-scroll-wrapper squares">
                 <div class="col-4 box-container">
                     <div class="image-overlay"></div>
-                    <img src="images/power-tab.jpeg" alt="tablet pc">
-                    <h5 class="product_name">Tablet Pc</h5>
+                    <img src="images/Sports1.jpg" alt="tablet pc">
+                    <h5 class="product_name">Sports Club</h5>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -68,17 +72,47 @@
                         <i class="fa fa-star-o"></i>
                     </div>
                     <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Tablet Pc</h3>
-                        <h4 class="content-price">Rs1000.99</h4>
+                        <h3 class="content-title">SPORTS CLUB</h3>
+                        <h4 class="content-price">SRMU</h4>
                         <div class="content-btn btn btn-secondary" title="Add to Cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
                     </div>
-                    <p class="price_name" >Rs1000.99</p>
+                    <p class="price_name" >SPORT activity</p>
                     <!-- <div class="btn btn-secondary" title="Preview Item"><i class="fa fa-cart-plus" aria-hidden="true"></i>
                     </div> -->
                 </div>
+                <div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; border: 1px solid #ccc; width: 300px; height: 400px; background-color: #f9f9f9; overflow: hidden; display: flex; flex-direction: column;">
+                    <div id="chatbot-messages" style="flex-grow: 1; padding: 10px; overflow-y: auto;">
+                      <div class="chatbot-message bot">Hello! How can I help you?</div>
+                    </div>
+                    <div id="chatbot-input-area" style="padding: 10px; border-top: 1px solid #ccc; display: flex;">
+                      <input type="text" id="chatbot-input" placeholder="Type your message..." style="flex-grow: 1; padding: 8px; border: 1px solid #ddd; border-radius: 5px;">
+                      <button id="chatbot-send-button" style="padding: 8px 15px; margin-left: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+                    </div>
+                  </div>
+                  
+                  <button id="chatbot-toggle-button" style="position: fixed; bottom: 20px; right: 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; padding: 10px 15px; cursor: pointer;">Chat</button>
+                  
+                  <style>
+                    .chatbot-message {
+                      padding: 18px;
+                      margin-bottom: 18px;
+                      border-radius: 25px;
+                      clear: both;
+                    }
+                    .chatbot-message.user {
+                      background-color: #e0f7fa;
+                      text-align: right;
+                      float: right;
+                    }
+                    .chatbot-message.bot {
+                      background-color: #f0f0f0;
+                      text-align: left;
+                      float: left;
+                    }
+                  </style>
                 <div class="col-4 box-container">
-                    <img src="images/ps4-gaming.jpg" alt="Gaming console">
-                    <h5 class="product_name">X-box Console</h5>
+                    <img src="images/Sports29.jpg" alt="Gaming console">
+                    <h5 class="product_name">Events Club</h5>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -86,11 +120,11 @@
                         <i class="fa fa-star-o"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
-                    <p class="price_name" >Rs2000</p>
+                    <p class="price_name" >Join Now</p>
                 </div>
                 <div class="col-4 box-container">
-                    <img src="images/iphonex-phone.jpg" alt="Iphone X">
-                    <h5 class="product_name">IPhone X</h5>
+                    <img src="images/business2.jpg" alt="Iphone X">
+                    <h5 class="product_name">Buisness Club</h5>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -98,11 +132,11 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
                     </div>
-                    <p class="price_name" >Rs4999.99</p>
+                    <p class="price_name" >Join Now</p>
                 </div>
                 <div class="col-4 box-container">
-                    <img src="images/keyboard.jpg" alt="keyboard">
-                    <h5 class="product_name">Logitech Super Slim</h5>
+                    <img src="images/Surjhankar.jpg" alt="keyboard">
+                    <h5 class="product_name">Music Club</h5>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -110,15 +144,15 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
-                    <p class="price_name" >Rs199.99</p>
+                    <p class="price_name" >Join Now</p>
                 </div>
             </div>
             <!-- Latest products -->
-            <h2 class="title">Latest Products</h2>
+            <h2 class="title">Latest Club's</h2>
             <div class="row">
                 <div class="col-4 box-container">
-                    <img src="images/Alienware-laptop.png" alt="Gaming Laptop">
-                    <h5 class="product_name">X-box Console</h5>
+                    <img src="images/robotics4.jpg" alt="Gaming Laptop">
+                    <h5 class="product_name">Robotics Club</h5>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -126,23 +160,11 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
-                    <p class="price_name" >Rs2000</p>
+                    <p class="price_name" >Join Now</p>
                 </div>
                 <div class="col-4 box-container">
-                    <img src="images/canon-cam.jpg" alt="Camera">
-                    <h5 class="product_name">Canon 12X Pro Shoot</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs990</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/iphone9-phone.jpg" alt="Iphone SE">
-                    <h5 class="product_name">IPhone SE</h5>
+                    <img src="images/Eeventss.jpg" alt="Iphone SE">
+                    <h5 class="product_name">Pen Club</h5>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -150,11 +172,11 @@
                         <i class="fa fa-star-o"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
-                    <p class="price_name" >Rs4999.99</p>
+                    <p class="price_name" >Join Now</p>
                 </div>
                 <div class="col-4 box-container">
-                    <img src="images/logitech-tab.png" alt="Tablet Pc">
-                    <h5 class="product_name">Samsung Tablet PC</h5>
+                    <img src="images/Snapshot4.jpg" alt="Tablet Pc">
+                    <h5 class="product_name">Snapshot Club</h5>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -162,11 +184,11 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-half-o"></i>
                     </div>
-                    <p class="price_name" >Rs3999.99</p>
+                    <p class="price_name" >Join Now</p>
                 </div>
                 <div class="col-4 box-container">
-                    <img src="images/imac.jpg" alt="Imac">
-                    <h5 class="product_name">Apple Imac</h5>
+                    <img src="images/Surjhankar.jpg" alt="Gaming Laptop">
+                    <h5 class="product_name">Sur Jhankar Club</h5>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -174,140 +196,9 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-o"></i>
                     </div>
-                    <p class="price_name" >Rs7999.99</p>
+                    <p class="price_name" >Join Now</p>
                 </div>
-                <div class="col-4 box-container">
-                    <img src="images/thunderbolt.jpeg" alt="Gaming Laptop">
-                    <h5 class="product_name">USB Type-C Thunderbolt</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs200</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/laptop-gaming.jpg" alt="Gaming Laptop">
-                    <h5 class="product_name">Alienware Laptop</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs7000.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/cod-ps4.jpg" alt="Playstation 4">
-                    <h5 class="product_name">Call of Duty MW</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs1000.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/phantom-drone.png" alt="Phantom Drone">
-                    <h5 class="product_name">Phantom Drone</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p class="price_name" >Rs2500.00</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/epson-projector.png" alt="Epson Projector">
-                    <h5 class="product_name">Epson Projector</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs1000.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/ps4-headset.jpg" alt="Gaming Headset">
-                    <h5 class="product_name">Ps4 Gaming Headset</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs800</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/superbass-speakers.jpg" alt="Super Bass Laptop Speakers">
-                    <h5 class="product_name">Super Bass USB Speakers</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs1500</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/xbox-game.jpg" alt="Fifa 20 Xbox">
-                    <h5 class="product_name">Fifa 20 Xbox</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs300</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/xbox-headset.jpg" alt="Xbox Headset">
-                    <h5 class="product_name">X-box Headset</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs1000.99</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/falcon-drone.jpg" alt="falcon-drone">
-                    <h5 class="product_name">Falcon Drone</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs3000</p>
-                </div>
-                <div class="col-4 box-container">
-                    <img src="images/ps4-fortnite.jpg" alt="Fortnite">
-                    <h5 class="product_name">Ps4 Fornite</h5>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p class="price_name" >Rs300</p>
-                </div>
+            
             </div>
         </div>
 
@@ -316,11 +207,11 @@
             <div class="small-container">
                 <div class="row">
                     <div class="col-6">
-                        <img src="images/asus-banner.png" class="offer-img">
+                        <img src="images/logosrm(1).jpg" class="offer-img">
                     </div>
                     <div class="col-6 text-data text-white">
-                        <p>Top Prodcuts you should take it</p>
-                        <h1>Best Product limitd offer!</h1>
+                        <p>Here You Understand Which Club Is Best For U</p>
+                        <h1>Best Club Is Where You Want To In!</h1>
                         
                         <a href="" class="btn">Buy Now &#8594</a>
                     </div>
@@ -332,7 +223,7 @@
             <div class="small-container">
                 <div class="row">
                     <div class="col-2">
-                        <h3>My Google Maps Demo</h3>
+                        <h3> Google Maps </h3>
                         <div id="map"></div>
                     </div>
                     <div class="col-2">
@@ -347,19 +238,16 @@
             <div class="small-container">
                 <div class="row">
                     <div class="col-3">
-                        <img src="images/amazon_PNG24.png" alt="amazon logo">
+                        <img src="images/Events369.jpg" alt="apple logo">
                     </div>
                     <div class="col-3">
-                        <img src="images/apple_logo_PNG19675.png" alt="apple logo">
+                        <img src="images/Snapshot4.jpg" alt="samsung logo">
                     </div>
                     <div class="col-3">
-                        <img src="images/samsung_logo_PNG2.png" alt="samsung logo">
+                        <img src="images/Sports1.jpg" alt="mastercard logo">
                     </div>
                     <div class="col-3">
-                        <img src="images/mastercard_PNG7.png" alt="mastercard logo">
-                    </div>
-                    <div class="col-3">
-                        <img src="images/paypal_PNG19.png" alt="mastercard logo">
+                        <img src="images/Eeventss.jpg" alt="mastercard logo">
                     </div>
                 </div>
             </div>
@@ -371,23 +259,23 @@
                 <div class="row">
                     <div class="footer-col-1">
                         <h3>Download our app</h3>
-                        <p>Top G5  Enabled Prodcuts with good support</p>
+                        <p>All Clubs Cordinators Updated with good support</p>
                         <div class="app-logo">
-                            <img src="images/playstore.png" alt="">
-                            <img src="images/appstore.png" alt="">
+                           <a href="https://play.google.com/store/games?hl=en_IN"> <img src="images/playsto (1).png" alt=""></a>
+                            <a href="https://www.apple.com/in/app-store/"><img src="images/apss.png" alt=""> </a>
                         </div>
                     </div>
                     <div class="footer-col-2">
-                        <img src="images" alt="">
-                        <p>Best technology enabled product?</p>
+                        <img src="" alt="">
+                        <p>Best Clubs With rating</p>
                     </div>
                     <div class="footer-col-3">
                         <h3>Useful Links</h3>
                         <ul>
-                            <li>Coupons</li>
-                            <li>Blog Post</li>
-                            <li>Return Policy</li>
-                            <li>Join Affiliate</li>
+                            <li>Rating</li>
+                            <li>Per Click</li>
+                            <li>Clubs ID Cards</li>
+                            <li>Join As a cordinator</li>
                         </ul>
                     </div>
                     <div class="footer-col-4">
@@ -401,7 +289,7 @@
                     </div>
                 </div>
                 <hr>
-                <p class="copyright">Copyright 2021 Sarthak</p>
+                <p class="copyright">Copyright 2025 SRMU</p>
             </div>
         </div>
         <script src="main.js"></script>
