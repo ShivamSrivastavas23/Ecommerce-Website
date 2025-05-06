@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Club Coordinator Details</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        .detail-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .detail-item strong {
+            font-weight: bold;
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>XYZ Club</h1>
+        <h2>Coordinator Details</h2>
+
+        <div class="detail-item">
+            <strong>Coordinator Name:</strong>
+            <span id="coordinator-name"></span>
+        </div>
+
+        <div class="detail-item">
+            <strong>Email:</strong>
+            <span id="coordinator-email"></span>
+        </div>
+
+        <div class="detail-item">
+            <strong>Contact Number:</strong>
+            <span id="coordinator-contact"></span>
+        </div>
+
+        <div class="detail-item">
+            <strong>College:</strong>
+            <span>Shri Ramswaroop Memorial University</span>
+        </div>
+    </div>
+
+    <script>
+        // You can replace these with the actual coordinator details
+        document.getElementById('coordinator-name').textContent = "John Doe";
+        document.getElementById('coordinator-email').textContent = "john.doe@srmu.ac.in";
+        document.getElementById('coordinator-contact').textContent = "+91 9876543210";
+    </script>
+</body>
+</html>
